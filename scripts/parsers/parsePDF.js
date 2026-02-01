@@ -1,4 +1,4 @@
-pdfjsLib.GlobalWorkerOptions.workerSrc = '../../pdfjs/pdf.worker.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = '../pdfjs/pdf.worker.mjs';
 export async function parsePDF(file) {
     const buffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
